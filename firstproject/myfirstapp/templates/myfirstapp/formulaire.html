@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>formulaire</title>
-</head>
-<body>
-    <form action="/myfirstapp/bonjour" method="get">
-        {% csrf_token %}
-        <label for="nom">Nom :</label>
-        <input type="text" name="nom"/>
+{% extends "myfirstapp/main.html" %}
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" name="prenom"/>
+{% block title %}Mon formulaire{% endblock %}
 
-        <label for="age">Âge :</label>
-        <input type="number" name="age"/>
+{% block content %}
+<form action="/myfirstapp/bonjour" method="get">
+    {% csrf_token %}
+    <label for="nom">Nom :</label>
+    <input type="text" name="nom"/>
 
-        <input type="submit" value="envoyer"/>
-    </form>
-</body>
-</html>
+    <label for="prenom">Prénom :</label>
+    <input type="text" name="prenom"/>
+
+    <label for="age">Âge :</label>
+    <input type="number" name="age"/>
+
+    <input type="submit" value="envoyer"/>
+</form>
+{% endblock %}

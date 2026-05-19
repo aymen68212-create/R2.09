@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Bonjour</title>
-</head>
-<body>
-    {% if nom %}
-        <h1>Hello {{ prenom }} {{ nom }}, tu as {{ age }} ans !</h1>
-    {% else %}
-        <h1>Hello world</h1>
-    {% endif %}
-</body>
-</html>
+{% extends "myfirstapp/main.html" %}
+
+{% block title %}Résultat{% endblock %}
+
+{% block content %}
+{% if nom %}
+    <h1>Hello {{ prenom }} {{ nom }}, tu as {{ age }} ans !</h1>
+{% else %}
+    <h1>Hello world</h1>
+{% endif %}
+{% endblock %}
