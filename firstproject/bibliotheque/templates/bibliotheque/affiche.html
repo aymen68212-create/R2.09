@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Affichage du livre</title>
+</head>
+<body>
+    <h1>{{Livre.titre}}</h1>
+    <p>Auteur : {{Livre.auteur}}</p>
+    <p>Date de parution : {{Livre.date_parution}}</p>
+    <p>Nombre de pages : {{Livre.nombre_pages}}</p>
+    <p>Résumé : {{Livre.resume}}</p>
+
+    <a href="/bibliotheque/update/{{Livre.id}}/">Modifier</a>
+    <a href="/bibliotheque/delete/{{Livre.id}}/">Supprimer</a>
+    <a href="/bibliotheque/">Retour à la liste</a>
+</body>
+</html>
