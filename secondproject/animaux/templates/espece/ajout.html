@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body>
+    <form method="post" action="/espece/traitement/">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Envoyer"/>
+    </form>
+</body>
+</html>

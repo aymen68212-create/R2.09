@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body>
+    <title>Liste des espèces</title>
+    <a href="/espece/ajout">Ajouter une espèce</a>
+    <ul>
+        {% for espece in especes  %}
+            <li><a href="/espece/affiche/{{espece.id}}">{{espece}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
